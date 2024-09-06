@@ -9,6 +9,9 @@ driver = uc.Chrome(headless=True)
 
 pagination = [200,400,600,800,1000,1200]
 
+FLAG_1 = "Desenvolvedor"
+FLAG_2 = "Programador"
+
 result = list()
 
 print("Processing...")
@@ -20,7 +23,7 @@ for(i) in pagination:
     
     for(i) in vaga:
         text = i.text
-        if(text.__contains__("Farmaceutica") or text.__contains__("Farmaceutico")):
+        if(text.__contains__(FLAG_1) or text.__contains__(FLAG_2)):
             print(f"{len(result) + 1} Encontrados")
             children = i.find_elements(By.TAG_NAME, "a")
             href = children[0].get_attribute("href")
