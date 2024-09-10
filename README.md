@@ -1,7 +1,7 @@
 
-# 🔎 BauruEmpregos Search
+# 🔎 Vagas Search
 
-Este script automatiza a busca de vagas de emprego no site [BauruEmpregos](https://bauruempregos.com.br), permitindo que você pesquise vagas usando palavras-chave específicas. Ao final, ele gera um arquivo Excel contendo as vagas encontradas, junto com os links para acesso.
+Este script automatiza a busca de vagas de emprego no site [BauruEmpregos](https://bauruempregos.com.br) e [Gupy](https://portal.gupy.io), permitindo que você pesquise vagas usando palavras-chave específicas. Ao final, ele gera um arquivo Excel contendo as vagas encontradas, junto com os links para acesso.
 
 ## 🚀 Funcionalidades
 
@@ -35,6 +35,8 @@ Após instalado as dependências:
     1. Abra a pasta do projeto no terminal
 
     2. Execute o comando: python3 index.py
+
+    3. Selecione qual serviço deseja usar e siga o passo a passo no terminal
 
 ## 📞 Contato
 
