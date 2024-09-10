@@ -9,8 +9,9 @@ driver = uc.Chrome(headless=True)
 
 pagination = [200,400,600,800,1000,1200]
 
-FLAG_1 = "Desenvolvedor"
-FLAG_2 = "Programador"
+print("Insira as palavras-chave que deseja usar para buscar vagas!")
+FLAG_1 = input("Digite a primeira palavra-chave: ")
+FLAG_2 = input("Digite a segunda palavra-chave: ")
 
 result = list()
 
@@ -22,13 +23,13 @@ for(i) in pagination:
         
     
     for(i) in vaga:
-        text = i.text
-        if(text.__contains__(FLAG_1) or text.__contains__(FLAG_2) and not (text.__contains__("Torno") or text.__contains__("CNC"))): 
+        text = i.text.lower()
+        if(text.__contains__(FLAG_1.lower()) or text.__contains__(FLAG_2.lower())): 
             print(f"{len(result) + 1} Encontrados")
             children = i.find_elements(By.TAG_NAME, "a")
             href = children[0].get_attribute("href")
             result.append({
-                "name":  text,
+                "name":  text.capitalize(),
                 "link": href
             })
 
