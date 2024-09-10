@@ -23,7 +23,7 @@ for(i) in pagination:
     
     for(i) in vaga:
         text = i.text
-        if(text.__contains__(FLAG_1) or text.__contains__(FLAG_2)):
+        if(text.__contains__(FLAG_1) or text.__contains__(FLAG_2) and not (text.__contains__("Torno") or text.__contains__("CNC"))): 
             print(f"{len(result) + 1} Encontrados")
             children = i.find_elements(By.TAG_NAME, "a")
             href = children[0].get_attribute("href")
